@@ -13,6 +13,7 @@
 		B0D3780521A38629001FD7CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0D3780421A38629001FD7CE /* Assets.xcassets */; };
 		B0D3780821A38629001FD7CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D3780621A38629001FD7CE /* LaunchScreen.storyboard */; };
 		B0D3781321A38629001FD7CE /* PlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3781221A38629001FD7CE /* PlaygroundTests.swift */; };
+		B0D3782021A38920001FD7CE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3781F21A38920001FD7CE /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B0D3780E21A38629001FD7CE /* PlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D3781221A38629001FD7CE /* PlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundTests.swift; sourceTree = "<group>"; };
 		B0D3781421A38629001FD7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0D3781F21A38920001FD7CE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		B0D377F121A38628001FD7CE = {
 			isa = PBXGroup;
 			children = (
+				B0D3781D21A38902001FD7CE /* Library */,
 				B0D377FC21A38628001FD7CE /* Playground */,
 				B0D3781121A38629001FD7CE /* PlaygroundTests */,
 				B0D377FB21A38628001FD7CE /* Products */,
@@ -94,6 +97,22 @@
 				B0D3781421A38629001FD7CE /* Info.plist */,
 			);
 			path = PlaygroundTests;
+			sourceTree = "<group>";
+		};
+		B0D3781D21A38902001FD7CE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B0D3781E21A38902001FD7CE /* Extensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		B0D3781E21A38902001FD7CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0D3781F21A38920001FD7CE /* String+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0D3780021A38628001FD7CE /* ViewController.swift in Sources */,
+				B0D3782021A38920001FD7CE /* String+Extensions.swift in Sources */,
 				B0D377FE21A38628001FD7CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
