@@ -11,10 +11,19 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // Top view of whole application. It extens base class UIView like all other views.
     var window: UIWindow?
 
-
+    // Method executed after launching of application.
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Create dependency manager.
+        let dependencyManager = DependencyManager()
+        
+        // Load into main navigation stack our main menu controller.
+        if let navigationController = self.window?.rootViewController as? UINavigationController {
+            MainMenuFactory.pushIn(navigationController, dependencyManager: dependencyManager)
+        }
+        
         // Override point for customization after application launch.
         return true
     }
