@@ -1,3 +1,6 @@
 
 # Xcode user data
 **/xcuserdata/
+
+# Mac OS files
+.DS_Store

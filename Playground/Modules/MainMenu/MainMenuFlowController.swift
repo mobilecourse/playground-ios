@@ -25,4 +25,8 @@ class MainMenuFlowController {
         self.navigationController = navigationController
         self.viewController = viewController
     }
+    
+    func goToSettings() {
+        
+    }
 }

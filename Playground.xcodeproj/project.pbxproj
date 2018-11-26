@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B07DC54421AC61AB00BAE183 /* MainMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07DC54321AC61AB00BAE183 /* MainMenuViewController.storyboard */; };
 		B0D3781321A38629001FD7CE /* PlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3781221A38629001FD7CE /* PlaygroundTests.swift */; };
 		B0D3782021A38920001FD7CE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3781F21A38920001FD7CE /* String+Extensions.swift */; };
 		B0D3782721A38A49001FD7CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3782521A38A49001FD7CE /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B07DC54321AC61AB00BAE183 /* MainMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenuViewController.storyboard; sourceTree = "<group>"; };
 		B0D377FA21A38628001FD7CE /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D3780E21A38629001FD7CE /* PlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D3781221A38629001FD7CE /* PlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundTests.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				B0D3783721A38C6F001FD7CE /* MainMenuFactory.swift */,
 				B0D3783921A38D0F001FD7CE /* MainMenuFlowController.swift */,
+				B07DC54321AC61AB00BAE183 /* MainMenuViewController.storyboard */,
 				B0D3783321A38C47001FD7CE /* MainMenuViewController.swift */,
 				B0D3783521A38C58001FD7CE /* MainMenuViewModel.swift */,
 			);
@@ -251,6 +254,7 @@
 				B0D3783121A38AB2001FD7CE /* Main.storyboard in Resources */,
 				B0D3782A21A38A5C001FD7CE /* Assets.xcassets in Resources */,
 				B0D3783021A38AB2001FD7CE /* LaunchScreen.storyboard in Resources */,
+				B07DC54421AC61AB00BAE183 /* MainMenuViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

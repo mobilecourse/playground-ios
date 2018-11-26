@@ -15,7 +15,8 @@ class MainMenuFactory {
     static func pushIn(_ navigationController: UINavigationController, dependencyManager: DependencyManager) {
         
         // Creates view controller.
-        let viewController = MainMenuViewController()
+        //let viewController = MainMenuViewController()
+        let viewController = UIStoryboard(name: "MainMenuViewController", bundle: nil).instantiateViewController(withIdentifier: "MainMenuViewController") as! MainMenuViewController
         
         // Creates flow controller.
         let flowController = MainMenuFlowController(
@@ -28,6 +29,7 @@ class MainMenuFactory {
         viewModel.delegate = viewController
         
         // Push into navigation stack.
+        navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(viewController, animated: false)
     }
 }
