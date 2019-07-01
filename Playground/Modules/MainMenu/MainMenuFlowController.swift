@@ -20,13 +20,17 @@ class MainMenuFlowController {
     // This class attribute must be weak to not create memory leak.
     weak var viewController: MainMenuViewController?
     
+    let dependencyManager: DependencyManager
+    
     // Initializer in most cases only gets dependencies.
-    init(navigationController: UINavigationController, viewController: MainMenuViewController) {
+    init(navigationController: UINavigationController, viewController: MainMenuViewController, dependencyManager: DependencyManager) {
         self.navigationController = navigationController
         self.viewController = viewController
+        self.dependencyManager = dependencyManager
     }
     
     func goToSettings() {
-        
+        print("OTHER SCREEN")
+        SecondScreenFactory.pushIn(navigationController!, dependencyManager: self.dependencyManager)
     }
 }

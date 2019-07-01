@@ -21,7 +21,8 @@ class MainMenuFactory {
         // Creates flow controller.
         let flowController = MainMenuFlowController(
             navigationController: navigationController,
-            viewController: viewController)
+            viewController: viewController,
+            dependencyManager: dependencyManager)
         
         // Creates view model. Binding with view controller.
         let viewModel = MainMenuViewModel(flowController: flowController)

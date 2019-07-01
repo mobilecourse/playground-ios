@@ -30,7 +30,7 @@ class MainMenuViewController: UIViewController, MainMenuViewModelDelegate, UITab
     // we can now add subviews or set other view's parameters.
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .yellow
+        self.view.backgroundColor = .blue
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
@@ -43,6 +43,12 @@ class MainMenuViewController: UIViewController, MainMenuViewModelDelegate, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath.item == 0 ){
+            viewModel.goToOtherScreen()
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,6 +65,6 @@ class MainMenuViewController: UIViewController, MainMenuViewModelDelegate, UITab
     }
     
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Ala ma kota"
+        return viewModel.getSectionTitle(section: section)
     }
 }

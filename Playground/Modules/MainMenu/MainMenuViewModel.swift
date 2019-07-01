@@ -16,6 +16,7 @@ protocol MainMenuViewModelDelegate: class {
     
 }
 
+
 // View model should represent current state of view,
 // but it should be independent on UIKit classes.
 class MainMenuViewModel {
@@ -30,4 +31,16 @@ class MainMenuViewModel {
     init(flowController: MainMenuFlowController) {
         self.flowController = flowController
     }
+    
+    func getSectionTitle(section: Int) -> String {
+        if (section == 0) {
+            return "FIRST ROW"
+        } else {
+            return "OTHER ROW"
+        }
+
+    }
+    
+    func goToOtherScreen() {
+        flowController.goToSettings()    }
 }
