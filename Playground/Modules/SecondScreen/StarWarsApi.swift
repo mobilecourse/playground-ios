@@ -12,7 +12,7 @@ import Alamofire
 class StarWarsApi {
     
     func getFirstPerson() {
-        AF.request("https://swapi.co/api/people/1/").response { response in
+        AF.request("https://swapi.co/api/people/1").response { response in
             print("Request: \(String(describing: response.request))")
             print("Response: \(String(describing: response.response))")
             print("Error: \(String(describing: response.error))")
