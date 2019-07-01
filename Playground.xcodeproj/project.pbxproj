@@ -24,6 +24,8 @@
 		BE0B6E6622CA043400539F9E /* SeconScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B6E6522CA043400539F9E /* SeconScreenViewController.swift */; };
 		BE0B6E6822CA044500539F9E /* SecondScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B6E6722CA044500539F9E /* SecondScreenViewModel.swift */; };
 		BE0B6E6A22CA046200539F9E /* SecondScreenFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B6E6922CA046200539F9E /* SecondScreenFlowController.swift */; };
+		BE1D27BC22CA3DD200A2B845 /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D27BB22CA3DD200A2B845 /* StarWarsApi.swift */; };
+		C43963D997D4BC9966EEFBB7 /* libPods-Playground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D74C85CD6791A73066F7138 /* libPods-Playground.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52493B65FC6CD41DE7453B55 /* Pods-Playground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground.debug.xcconfig"; path = "Target Support Files/Pods-Playground/Pods-Playground.debug.xcconfig"; sourceTree = "<group>"; };
+		5D74C85CD6791A73066F7138 /* libPods-Playground.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Playground.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E89D4F39B1F3950ACDBFE95 /* Pods-Playground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Playground.release.xcconfig"; path = "Target Support Files/Pods-Playground/Pods-Playground.release.xcconfig"; sourceTree = "<group>"; };
 		B07DC54321AC61AB00BAE183 /* MainMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenuViewController.storyboard; sourceTree = "<group>"; };
 		B0D377FA21A38628001FD7CE /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D3780E21A38629001FD7CE /* PlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +63,7 @@
 		BE0B6E6522CA043400539F9E /* SeconScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeconScreenViewController.swift; sourceTree = "<group>"; };
 		BE0B6E6722CA044500539F9E /* SecondScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewModel.swift; sourceTree = "<group>"; };
 		BE0B6E6922CA046200539F9E /* SecondScreenFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenFlowController.swift; sourceTree = "<group>"; };
+		BE1D27BB22CA3DD200A2B845 /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StarWarsApi.swift; path = Playground/Modules/SecondScreen/StarWarsApi.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43963D997D4BC9966EEFBB7 /* libPods-Playground.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36FE6FB84D13C13CCF9C25CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D74C85CD6791A73066F7138 /* libPods-Playground.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B0D377F121A38628001FD7CE = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +100,8 @@
 				B0D377FC21A38628001FD7CE /* Playground */,
 				B0D3781121A38629001FD7CE /* PlaygroundTests */,
 				B0D377FB21A38628001FD7CE /* Products */,
+				D0BBE175530AB15D131DFCE6 /* Pods */,
+				36FE6FB84D13C13CCF9C25CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +174,7 @@
 		B0D3782321A389BB001FD7CE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D27BB22CA3DD200A2B845 /* StarWarsApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -193,6 +211,15 @@
 			path = SecondScreen;
 			sourceTree = "<group>";
 		};
+		D0BBE175530AB15D131DFCE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52493B65FC6CD41DE7453B55 /* Pods-Playground.debug.xcconfig */,
+				9E89D4F39B1F3950ACDBFE95 /* Pods-Playground.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0D3781721A38629001FD7CE /* Build configuration list for PBXNativeTarget "Playground" */;
 			buildPhases = (
+				01C3B34D08A0B666F51D512B /* [CP] Check Pods Manifest.lock */,
 				B0D377F621A38628001FD7CE /* Sources */,
 				B0D377F721A38628001FD7CE /* Frameworks */,
 				B0D377F821A38628001FD7CE /* Resources */,
@@ -292,6 +320,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01C3B34D08A0B666F51D512B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Playground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B0D377F621A38628001FD7CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -306,6 +359,7 @@
 				B0D3782021A38920001FD7CE /* String+Extensions.swift in Sources */,
 				BE0B6E6622CA043400539F9E /* SeconScreenViewController.swift in Sources */,
 				B0D3783421A38C47001FD7CE /* MainMenuViewController.swift in Sources */,
+				BE1D27BC22CA3DD200A2B845 /* StarWarsApi.swift in Sources */,
 				B0D3783821A38C6F001FD7CE /* MainMenuFactory.swift in Sources */,
 				B0D3783C21A38F4D001FD7CE /* DependencyManager.swift in Sources */,
 			);
@@ -467,6 +521,7 @@
 		};
 		B0D3781821A38629001FD7CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52493B65FC6CD41DE7453B55 /* Pods-Playground.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -486,6 +541,7 @@
 		};
 		B0D3781921A38629001FD7CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E89D4F39B1F3950ACDBFE95 /* Pods-Playground.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

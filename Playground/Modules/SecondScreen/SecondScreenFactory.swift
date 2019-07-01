@@ -13,9 +13,13 @@ class SecondScreenFactory {
 
 static func pushIn(_ navigationController: UINavigationController, dependencyManager: DependencyManager) {
     
+    let api = dependencyManager.starWarsApi
+    
     // Creates view controller.
     //let viewController = MainMenuViewController()
     let viewController = UIStoryboard(name: "SeconScreenViewController", bundle: nil).instantiateViewController(withIdentifier: "SeconScreenViewController") as! SeconScreenViewController
+    
+
     
     // Creates flow controller.
     let flowController = SecondScreenFlowController(
@@ -23,12 +27,12 @@ static func pushIn(_ navigationController: UINavigationController, dependencyMan
         viewController: viewController)
     
     // Creates view model. Binding with view controller.
-    let viewModel = SecondScreenViewModel(flowController: flowController)
+    let viewModel = SecondScreenViewModel(flowController: flowController, starWarsApi: api)
     viewController.viewModel = viewModel
     viewModel.delegate = viewController
     
     // Push into navigation stack.
-    navigationController.isNavigationBarHidden = true
+    navigationController.isNavigationBarHidden = false
     navigationController.pushViewController(viewController, animated: false)
 }
 }

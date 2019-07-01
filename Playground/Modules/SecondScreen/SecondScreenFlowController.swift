@@ -21,6 +21,4 @@ class SecondScreenFlowController {
         self.navigationController = navigationController
         self.viewController = viewController
     }
-
-    
 }

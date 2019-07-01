@@ -16,8 +16,11 @@ protocol SecondScreenViewModelDelegate: class {
 class SecondScreenViewModel {
     
     // Initializer.
-    init(flowController: SecondScreenFlowController) {
+    init(flowController: SecondScreenFlowController, starWarsApi: StarWarsApi) {
         self.flowController = flowController
+        self.starWarsApi = starWarsApi
+        
+        starWarsApi.getFirstPerson()
     }
     
     // Feedback for view controller.
@@ -25,4 +28,7 @@ class SecondScreenViewModel {
     
     // Flow controller is owned by view model.
     let flowController: SecondScreenFlowController
+    
+    // api
+    let starWarsApi :StarWarsApi
 }

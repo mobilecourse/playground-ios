@@ -13,4 +13,6 @@ import Foundation
 // be used instead of all singletons.
 class DependencyManager {
     
+    var starWarsApi = StarWarsApi()
+    
 }
