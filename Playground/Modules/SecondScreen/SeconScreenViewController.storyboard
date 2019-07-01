@@ -13,7 +13,7 @@
         <!--Secon Screen View Controller-->
         <scene sceneID="IJH-PY-zwr">
             <objects>
-                <viewController storyboardIdentifier="SeconScreenViewController" id="zYn-H5-HsS" customClass="SeconScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SeconScreenViewController" id="zYn-H5-HsS" customClass="SeconScreenViewController" customModule="Playground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BI6-vW-ZRm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
