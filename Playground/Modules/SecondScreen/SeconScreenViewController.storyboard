@@ -29,6 +29,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="tYH-5k-ny5"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="es1-Vo-vJy" id="R4s-xK-Kzl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcs-bU-tbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,9 +8,8 @@
 
 import Foundation
 
-
 protocol SecondScreenViewModelDelegate: class {
-    
+    func updateLabel(text: String)
 }
 
 class SecondScreenViewModel {
@@ -19,10 +18,14 @@ class SecondScreenViewModel {
     init(flowController: SecondScreenFlowController, starWarsApi: StarWarsApi) {
         self.flowController = flowController
         self.starWarsApi = starWarsApi
-        
-        starWarsApi.getFirstPerson()
     }
     
+    func start()  {
+        starWarsApi.getFirstPerson() { (value) in
+            print(value)
+            self.delegate.updateLabel(text: value)
+        }
+    }
     // Feedback for view controller.
     weak var delegate: SecondScreenViewModelDelegate!
     

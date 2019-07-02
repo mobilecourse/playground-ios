@@ -21,4 +21,8 @@ class SecondScreenFlowController {
         self.navigationController = navigationController
         self.viewController = viewController
     }
+    
+    func setPerson(person: String) {
+        viewController?.setLabelText(text: person)
+    }
 }
