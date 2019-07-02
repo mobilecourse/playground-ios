@@ -11,7 +11,7 @@ import Alamofire
 
 class StarWarsApi {
     
-    func getFirstPerson() {
+    func getFirstPerson() -> StarWarsPeron {
         AF.request("https://swapi.co/api/people/1").response { response in
             print("Request: \(String(describing: response.request))")
             print("Response: \(String(describing: response.response))")
@@ -21,10 +21,12 @@ class StarWarsApi {
 //                print("Data: \(utf8Text)")
                 
                 
-                let starWarsPeron = try? JSONDecoder().decode(StarWarsPeron.self, from: utf8Text)
+                let starWarsPeron = try? JSONDecoder().decode(StarWarsPeron.self, from: Data(utf8Text.utf8))
                 
-                print(starWarsPeron.name)
-                print(starWarsPeron.homeworld)
+                print(starWarsPeron?.name)
+                print(starWarsPeron?.homeworld)
+                
+                return starWarsPeron
 
             }
         }

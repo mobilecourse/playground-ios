@@ -11,4 +11,5 @@ import UIKit
 class SeconScreenViewController:  UIViewController, SecondScreenViewModelDelegate {
     
         var viewModel: SecondScreenViewModel!
+    
 }
