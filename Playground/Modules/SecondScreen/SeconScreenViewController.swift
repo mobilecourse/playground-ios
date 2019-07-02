@@ -7,23 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 class SeconScreenViewController:  UIViewController, SecondScreenViewModelDelegate {
+    
+    
+    @IBAction func addButton(_ sender: UIButton) {
+        print("ADD BUTTON")
+    }
+    
+    @IBOutlet weak var label: UILabel!
+    var viewModel: SecondScreenViewModel!
+
     func updateLabel(text: String) {
         label.text = text
     }
-    
-    
-        var viewModel: SecondScreenViewModel!
-    
-    
-    @IBOutlet weak var label: UILabel!
-    
+
     func setLabelText(text forLabel: String) {
         label.text = forLabel
     }
     
     override func viewDidLoad() {
         viewModel.start()
-    
     }}

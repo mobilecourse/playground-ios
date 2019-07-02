@@ -25,6 +25,9 @@
 		BE0B6E6822CA044500539F9E /* SecondScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B6E6722CA044500539F9E /* SecondScreenViewModel.swift */; };
 		BE0B6E6A22CA046200539F9E /* SecondScreenFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0B6E6922CA046200539F9E /* SecondScreenFlowController.swift */; };
 		BE1D27BC22CA3DD200A2B845 /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D27BB22CA3DD200A2B845 /* StarWarsApi.swift */; };
+		BE1D27BF22CB633400A2B845 /* Playground.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE1D27BD22CB633400A2B845 /* Playground.xcdatamodeld */; };
+		BE1D27C322CB644E00A2B845 /* StarWarsPerson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D27C122CB644E00A2B845 /* StarWarsPerson+CoreDataClass.swift */; };
+		BE1D27C422CB644E00A2B845 /* StarWarsPerson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1D27C222CB644E00A2B845 /* StarWarsPerson+CoreDataProperties.swift */; };
 		C43963D997D4BC9966EEFBB7 /* libPods-Playground.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D74C85CD6791A73066F7138 /* libPods-Playground.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,9 @@
 		BE0B6E6722CA044500539F9E /* SecondScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewModel.swift; sourceTree = "<group>"; };
 		BE0B6E6922CA046200539F9E /* SecondScreenFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenFlowController.swift; sourceTree = "<group>"; };
 		BE1D27BB22CA3DD200A2B845 /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StarWarsApi.swift; path = Playground/Modules/SecondScreen/StarWarsApi.swift; sourceTree = SOURCE_ROOT; };
+		BE1D27BE22CB633400A2B845 /* Playground.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Playground.xcdatamodel; sourceTree = "<group>"; };
+		BE1D27C122CB644E00A2B845 /* StarWarsPerson+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarWarsPerson+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BE1D27C222CB644E00A2B845 /* StarWarsPerson+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StarWarsPerson+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		B0D377FC21A38628001FD7CE /* Playground */ = {
 			isa = PBXGroup;
 			children = (
+				BE1D27C022CB644300A2B845 /* Data */,
 				B0D3782121A38984001FD7CE /* Application */,
 				B0D3782221A38996001FD7CE /* Modules */,
 				B0D3782421A389F5001FD7CE /* Resources */,
@@ -183,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D3782921A38A5C001FD7CE /* Assets.xcassets */,
+				BE1D27BD22CB633400A2B845 /* Playground.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -209,6 +217,15 @@
 				BE0B6E6922CA046200539F9E /* SecondScreenFlowController.swift */,
 			);
 			path = SecondScreen;
+			sourceTree = "<group>";
+		};
+		BE1D27C022CB644300A2B845 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BE1D27C122CB644E00A2B845 /* StarWarsPerson+CoreDataClass.swift */,
+				BE1D27C222CB644E00A2B845 /* StarWarsPerson+CoreDataProperties.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D0BBE175530AB15D131DFCE6 /* Pods */ = {
@@ -360,8 +377,11 @@
 				BE0B6E6622CA043400539F9E /* SeconScreenViewController.swift in Sources */,
 				B0D3783421A38C47001FD7CE /* MainMenuViewController.swift in Sources */,
 				BE1D27BC22CA3DD200A2B845 /* StarWarsApi.swift in Sources */,
+				BE1D27C422CB644E00A2B845 /* StarWarsPerson+CoreDataProperties.swift in Sources */,
+				BE1D27BF22CB633400A2B845 /* Playground.xcdatamodeld in Sources */,
 				B0D3783821A38C6F001FD7CE /* MainMenuFactory.swift in Sources */,
 				B0D3783C21A38F4D001FD7CE /* DependencyManager.swift in Sources */,
+				BE1D27C322CB644E00A2B845 /* StarWarsPerson+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +650,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE1D27BD22CB633400A2B845 /* Playground.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE1D27BE22CB633400A2B845 /* Playground.xcdatamodel */,
+			);
+			currentVersion = BE1D27BE22CB633400A2B845 /* Playground.xcdatamodel */;
+			path = Playground.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B0D377F221A38628001FD7CE /* Project object */;
 }
