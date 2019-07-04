@@ -10,6 +10,7 @@ import Foundation
 
 protocol SecondScreenViewModelDelegate: class {
     func updateLabel(text: String)
+    func saveToDatabase(person: StarWarsPeron)
 }
 
 class SecondScreenViewModel {
@@ -22,8 +23,8 @@ class SecondScreenViewModel {
     
     func start()  {
         starWarsApi.getFirstPerson() { (value) in
-            print(value)
-            self.delegate.updateLabel(text: value)
+            self.delegate.updateLabel(text: value?.name ?? "default name")
+            self.delegate.saveToDatabase(person: value!)
         }
     }
     // Feedback for view controller.
