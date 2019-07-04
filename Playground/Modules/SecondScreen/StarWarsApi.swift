@@ -13,7 +13,9 @@ class StarWarsApi {
     
     func getFirstPerson(completionHandler: @escaping ((StarWarsPeron?) -> Void)) {
         
-        AF.request("https://swapi.co/api/people/1").response { response in
+        let number = Int.random(in: 1...5)
+        
+        AF.request("https://swapi.co/api/people/\(number)").response { response in
             print("Request: \(String(describing: response.request))")
             print("Response: \(String(describing: response.response))")
             print("Error: \(String(describing: response.error))")
