@@ -24,7 +24,8 @@ class SecondScreenViewModel {
     func start()  {
         starWarsApi.getFirstPerson() { (value) in
             self.delegate.updateLabel(text: value?.name ?? "default name")
-            self.delegate.saveToDatabase(person: value!)
+            if (value != nil) {
+                self.delegate.saveToDatabase(person: value!)}
         }
     }
     // Feedback for view controller.

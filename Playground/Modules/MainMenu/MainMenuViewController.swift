@@ -8,6 +8,7 @@
 
 // Views and view controller must import UIKit.
 import UIKit
+import CoreData
 
 // All view controllers must extend base class UIViewController.
 // Please remember that this is still part of view layer in
@@ -15,6 +16,9 @@ import UIKit
 class MainMenuViewController: UIViewController, MainMenuViewModelDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var finalList: Array<String>!
+  
     
     // MARK: - Dependencies
     
@@ -33,16 +37,26 @@ class MainMenuViewController: UIViewController, MainMenuViewModelDelegate, UITab
         self.view.backgroundColor = .blue
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "StarWarsPerson")
+        let result = try? managedContext.fetch(fetchRequest)
+        let resultList = result as! [NSManagedObject]
+        finalList = resultList.map({
+            ($0.value(forKey: "name") as? String)!
+        })
+        
+    
     }
-    
-    // MARK: - MainMenuViewModelDelegate methods
-    
     // TODO: ...
     
     // MARK: - UITableViewDataSource methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return finalList.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -53,15 +67,21 @@ class MainMenuViewController: UIViewController, MainMenuViewModelDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let currentItem = finalList.randomElement()
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        
-        cell.textLabel?.text = "Ala ma dom"
-        
+//        do {
+//
+//            let item = resultList[indexPath.row].value(forKey: "name") as! String
+            cell.textLabel?.text = currentItem
+//            return cell
+//        } catch {}
+//        cell.textLabel?.text = "BLA BLA BLA"
         return cell
+        
     }
     
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
